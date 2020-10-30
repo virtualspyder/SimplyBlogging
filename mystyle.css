@@ -299,15 +299,7 @@ body {
         text-decoration: underline;
       }
       
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-weight: 800;
-        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      }
+    
       
       a {
         color: #212529;
@@ -411,20 +403,7 @@ body {
         transition: top 0.3s ease, opacity 0.3s ease;
         opacity: 0;
       }
-      
-      .floating-label-form-group .help-block {
-        margin: 15px 0;
-      }
-      
-      .floating-label-form-group-with-value label {
-        top: 0;
-        opacity: 1;
-      }
-      
-      .floating-label-form-group-with-focus label {
-        color: #0085A1;
-      }
-      
+
 
       footer {
         padding: 50px 0 65px;
@@ -468,15 +447,7 @@ body {
       }
 
 
-      input {
-        margin: 0;
-        border: none;
-        border-radius: 0;
-        width: 75%;
-        padding: 10px;
-        float: left;
-        font-size: 16px;
-      }
+     
       .addBtn {
         padding: 10px;
         width: 25%;
@@ -492,6 +463,7 @@ body {
       .addBtn:hover {
         background-color: #bbb;
       }
+      
       #clear-list{
         width: 30%;
         font-weight: bold;
@@ -502,28 +474,15 @@ body {
         background-color: green;
         color: lightgray;
       }
+
+
+
+
       #clear-list:hover{
         background-color:red;
         color: black;
       }
 
-      ul {
-        list-style-type: none;
-      }
-
-      body {
-        font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      }
-      
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        font-weight: 700;
-      }
       
 
       header.masthead h1 {
@@ -553,14 +512,7 @@ body {
       .features-icons .features-icons-item {
         max-width: 20rem;
       }
-      
-      .features-icons .features-icons-item .features-icons-icon {
-        height: 7rem;
-      }
-      
-      .features-icons .features-icons-item .features-icons-icon i {
-        font-size: 4.5rem;
-      }
+    
       
       .features-icons .features-icons-item:hover .features-icons-icon i {
         font-size: 5rem;
@@ -571,12 +523,4 @@ body {
         padding-bottom: 7rem;
       }
       
-      .testimonials .testimonial-item {
-        max-width: 18rem;
-      }
-      
-      .testimonials .testimonial-item img {
-        max-width: 12rem;
-        box-shadow: 0px 5px 5px 0px #adb5bd;
-      }
     
