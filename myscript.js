@@ -79,3 +79,9 @@ function newElement() {
 //         lst[i].style.display = 'none';
 //     }
 // }
+
+
+
+
+
+
