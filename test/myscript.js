@@ -1,32 +1,95 @@
-<!DOCTYPE html>
-<html>
+function newTodo () {
 
-<head>
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
-</head>
 
-<body>
+    var inputValue  = document.getElementById('myInput').value;
+    var text = document.createTextNode(inputValue);
+    var li = document.createElement('li');
+    var p = document.createElement('p');
+    var h2 = document.createElement('h2');
 
-    <div class="header">
-        <h2 style="margin:5px">To Do List</h2>
-        <input type="text" id="myInput" placeholder="Title...">
-        <span onclick="newElement()" class="addBtn">Add</span>
-    </div>
+    h2.appendChild(text);
+    li.appendChild(h2);
 
-    <ul id="myUL">
-        <li>Call to Rohit</li>
-        <li class="checked">Align Meeting with Yuvraj</li>
-        <li>Send Proposal to TCS</li>
-        <li class="checked">Prepare JS Activity</li>
-        <li>Take Some Rest</li>
-    </ul>
-    <button type="button" id="clear-list" onclick="removeAll()">Clear Items</button>
+    p.appendChild(text);
+    li.appendChild(p);
 
-    <script type="text/javascript" src="newTodo.js"></script>
+    if(inputValue === ''){
+        alert('You must write something')
+    } else {
+        document.getElementById('myList').appendChild(h2).appendChild(li);
+        document.getElementById('myList').appendChild(li);
+        document.getElementById('myInput').value = '';
+    }
 
-</body>
+    var span = document.createElement('span');
+    var text = document.createTextNode(" \u00D7");
+    var card = document.createElement('card')
+    span.appendChild(text);
+    span.className = "close";
+    list[i].appendChild(span);
 
-</html>
+    for(i=0; i<close.length;i++){
+        close[i].onclick = function () {
+            var div = this.parentElement;
+            div.style.display = 'None';
+        } 
+    }
+
+
+
+    // document.getElementById("myList").appendChild(li);
+
+}
+
+function removeAll() {
+    var list = document.getElementsByTagName('ul')
+    list[0].innerHTML = '';
+}
+
+/** 
+ * Create close button for each item in list
+ */
+var list = document.getElementsByTagName('li');
+var i;
+for(i=0; i<list.length; i++){
+    var span = document.createElement('span');
+    var text = document.createTextNode(" \u00D7");
+    span.appendChild(text);
+    span.className = "close";
+    list[i].appendChild(span);
+}
+
+//Click close to hide current list item
+var close = document.getElementsByClassName('close');
+var i;
+for(i=0; i<close.length;i++){
+    close[i].onclick = function () {
+        var div = this.parentElement;
+        div.style.display = 'None';
+    } 
+}
+
+
+
+
+
+
+http://127.0.0.1:5500/blog.html
+
+
+
+
+
+function removeAll() {
+    var list = document.getElementsByTagName('li')
+    var h2 = document.getElementsByTagName('h2');
+    var p = document.getElementsByTagName('p');
+
+    for(inti=0;i<list.length;i++){
+        h2[i].innerHTML = '';
+        p[i].innerHTML = '';
+    }
+}
 
 
 
@@ -121,6 +184,44 @@
 </div>
 
 
+<!-- main content ends -->
+<div class="footer-section mt-5">
+    <p class="text-center m-0 text-white">2020 © Copyright by Hamza Sheikh</p>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- <script type="text/javascript" src="myscript.js"></script> -->
+
+  
+  
+</body>
+</html>
 
 
 
+
+<!-- 
+
+<div class="row main-section">
+  <div class="col-sm-12 col-md-9 col-lg-9">
+      <div class="card rounded-0 shadow-sm" >
+          <div class="card-header">
+              <span>By</span>
+              <span class="text-success"> Hamza Sheikh</span>
+              <span>On</span>
+              <span class="text-success"> 28 Oct 2020</span>
+          </div>
+          <div class="card-body">
+            <img class="card-img-top" src="https://via.placeholder.com/750x300" alt="bootstrap simple blog">
+            <hr>
+              <h2 class="card-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dicta nisi ab consequatur fugit obcaecati harum expedita, doloremque dolorem quam aut quas ad amet assumenda. Provident sunt ipsum minima autem.</p>
+              <a href="blog-post.html" class="btn btn-primary">Read more</a>
+          </div>
+      </div>
+
+  </div> --></div>
