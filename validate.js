@@ -1,70 +1,94 @@
-function printError(element, msg){
-    document.getElementById(element).innerHTML = msg;
+// Defining a function to display error message
+function printError(elemId, hintMsg) {
+    document.getElementById(elemId).innerHTML = hintMsg;
 }
 
-function validateForm(){
-    
+// Defining a function to validate form 
+function validateForm() {
+    // Retrieving the values of form elements 
     var name = document.contactForm.name.value;
     var email = document.contactForm.email.value;
     var mobile = document.contactForm.mobile.value;
     var message = document.contactForm.message.value;
- 
+    var topics = [];
+    var checkboxes = document.getElementsByName("topics[]");
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            // Populate topics array with selected values
+            topics.push(checkboxes[i].value);
+        }
+    }
 
-    var nameErr = emailErr = mobileErr = messageErr = true; 
+    // Defining error variables with a default value
+    var nameErr = emailErr = mobileErr = messageErr = true;
 
-    if(name == ""){
+    // Validate name
+    if (name == "") {
         printError("nameErr", "Please enter your name");
-    }else{
+    } else {
         var regex = /^[a-zA-Z\s]+$/;
-        if(regex.test(name) === false){
+        if (regex.test(name) === false) {
             printError("nameErr", "Please enter a valid name");
-        }else{
+        } else {
             printError("nameErr", "");
             nameErr = false;
         }
     }
 
-    if(email == ""){
-        printError("emailErr", "Please enter your email");
-    }else{
+    // Validate email address
+    if (email == "") {
+        printError("emailErr", "Please enter your email address");
+    } else {
+        // Regular expression for basic email validation
         var regex = /^\S+@\S+\.\S+$/;
-        if(regex.test(email) === false){
+        if (regex.test(email) === false) {
             printError("emailErr", "Please enter a valid email address");
-        }else{
+        } else {
             printError("emailErr", "");
             emailErr = false;
         }
     }
 
-    if(mobile == ""){
-        printError("mobileErr", "Please enter your phone number");
-    }else{
-        var regex = /^[0-9]{10}$/;
-        if(regex.test(mobile) === false){
-            printError("mobileErr", "Please enter a valid phone number");
-        }else{
+    // Validate mobile number
+    if (mobile == "") {
+        printError("mobileErr", "Please enter your mobile number");
+    } else {
+        var regex = /^[1-9]\d{9}$/;
+        if (regex.test(mobile) === false) {
+            printError("mobileErr", "Please enter a valid 10 digit mobile number");
+        } else {
             printError("mobileErr", "");
             mobileErr = false;
         }
     }
 
-    if(message == ""){
-        print(message)
+    //validate message
+    if (message == "") {
         printError("messageErr", "Please enter your message");
-    }else{
+    } else {
         var regex = /^[a-zA-Z0-9\s]+$/;
-        if(regex.test(message) === false){
+        if (regex.test(message) === false) {
             printError("messageErr", "Please enter a valid message");
-        }else{
+        } else {
             printError("messageErr", "");
-            nameErr = false;
+            messageErr = false;
         }
     }
-    
 
-    if(nameErr || emailErr || mobileErr || messageErr == true){
+    // Prevent the form from being submitted if there are any errors
+    if ((nameErr || emailErr || mobileErr || messageErr) == true) {
         return false;
-    }else{
-        alert('You\'ve submitted the form...');
+    } else {
+        // Creating a string from input data for preview
+        var dataPreview = "You've entered the following details: \n" +
+            "Full Name: " + name + "\n" +
+            "Email Address: " + email + "\n" +
+            "Mobile Number: " + mobile + "\n" +
+            "Message: " + message + "\n";
+        if (topics.length) {
+            dataPreview += "topics: " + topics.join(", ");
+        }
+        // Display input data in a dialog box before submitting the form
+        alert(dataPreview);
     }
-}
+};

@@ -41,13 +41,12 @@ function newElement() {
     var t = document.createTextNode(inputValue);
     var t2 = document.createTextNode(inputValue2);
 
-    var element = document.getElementById("myUL");
-    element.classList.add = "list-group-item";
-    ul.appendChild(li);
-    li.appendChild(h2);
-    li.appendChild(p);
-    h2.appendChild(t);
-    p.appendChild(t2);
+
+    ul.appendChild(li).className;
+    li.appendChild(h2).className;
+    li.appendChild(p).className;
+    h2.appendChild(t).className;
+    p.appendChild(t2).className;
     
     if (inputValue === '' || inputValue2 === '') {
         alert("You must write something!");
