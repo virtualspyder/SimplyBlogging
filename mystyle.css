@@ -1,7 +1,7 @@
 
 body {
     font-size: 16px;
-    background: lightgray;
+    background: white;
     font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     }
     h2 {
@@ -9,10 +9,10 @@ body {
     text-decoration: underline;
     }
     form {
-    width: 300px;
-    background: lightblue;
+    width: 800px;
+    background: white;
     padding: 15px 40px 40px;
-    border: 1px solid #ee0979;
+    border: 1px solid black;
     margin: 50px auto 0;
     border-radius: 5px;
     }
@@ -21,7 +21,7 @@ body {
     margin-bottom: 5px
     }
     label i {
-    color: #999;
+    color: wh;
     font-size: 80%;
     }
     input, select {
@@ -103,7 +103,7 @@ body {
         overflow: hidden;
         padding-top: calc(7rem + 72px);
         padding-bottom: 7rem;
-        background: linear-gradient(180deg, black 0%,blue 100%);
+        background: linear-gradient(0, salmon 0%,salmon 100%);
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: scroll;
@@ -127,7 +127,7 @@ body {
         z-index: 0;
         position: absolute;
         border-radius: 100%;
-        background: linear-gradient(0deg, black 0%, gray 100%);
+        background: linear-gradient(0deg, black 0%, red 100%);
       }
       
       header.masthead .bg-circle-1 {
@@ -159,10 +159,7 @@ body {
       }
       
       @media (min-width: 992px) {
-        header.masthead {
-          padding-top: calc(10rem + 55px);
-          padding-bottom: 10rem;
-        }
+
         header.masthead .masthead-content .masthead-heading {
           font-size: 6rem;
         }
@@ -232,8 +229,8 @@ body {
       .about-section {
         padding: 50px;
         text-align: center;
-        background-color: gray;
-        color: gray;
+        background-color: white;
+        color: black;
       }
       
       .container {
@@ -252,7 +249,7 @@ body {
         outline: 0;
         display: inline-block;
         padding: 8px;
-        color: lightgray;
+        color: white;
         background-color: #000;
         text-align: center;
         cursor: pointer;
@@ -275,7 +272,7 @@ body {
       }
       .footer-section {
         background: rgb(9, 9, 82);
-        background: linear-gradient(180deg, gray 0%, black 100%);
+        background: linear-gradient(180deg, whitea 0%, black 100%);
         padding-top: 60px;
         padding-bottom: 60px;
       }
@@ -471,7 +468,7 @@ a
         font-size: xx-large;
         font-family: "Times New Roman";
         margin: 40px 35%;
-        background-color: green;
+        background-color: blue;
         color: lightgray;
       }
 
